@@ -9,12 +9,12 @@ public class Epub
   public DateTime Date { get; set; }
   public List<Chapter> Chapters { get; set; } = new List<Chapter>();
 
-  public AddChapter(Chapter chapter)
+  public void AddChapter(Chapter chapter)
   {
     Chapters.Add(chapter);
   }
 
-  public AddChapter(string title, string content)
+  public void AddChapter(string title, string content)
   {
     Chapters.Add(new Chapter { Title = title, Content = content });
   }
