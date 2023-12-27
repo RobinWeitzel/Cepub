@@ -139,7 +139,7 @@ public static class EpubWriter
 
     string description = epub.Description;
     string date = epub.Date.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
-    string version = Assembly.GetEntryAssembly().GetCustomAttribute<AssemblyFileVersionAttribute>().Version;
+    string version = Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version ?? "1.0.0";
     string bookid = epub.Title.Replace(" ", "_");
     string booktitle = epub.Title;
     string language = epub.Language;

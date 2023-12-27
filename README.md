@@ -25,8 +25,8 @@ epub.AddChapter("Chapter 2", "This is the content of chapter 2");
 epub.Save(".", "test");
 ```
 
-License
+## License
 This project is licensed under the terms of the License file.
 
-Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit a pull request.
