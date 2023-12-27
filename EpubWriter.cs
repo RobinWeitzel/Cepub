@@ -166,7 +166,7 @@ public static class EpubWriter
     CreateNav(tempPath, booktitle, chapters);
 
     // Create the toc.ncx file
-    CreateToc(tempPath, booktitle, chapters, "1", "1", "1");
+    CreateToc(tempPath, booktitle, chapters, "0", "0", "0");
 
     // Create the chapter files
     for(int i = 0; i < chapters.Count; i++)
