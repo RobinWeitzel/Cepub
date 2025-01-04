@@ -41,6 +41,7 @@ public static class EpubWriter
     <dc:description>{description}</dc:description>
     <dc:title>{booktitle}</dc:title>
     <dc:language>{language}</dc:language>
+    <dc:date>{date}</dc:date>
     <dc:creator id=""creator"">{author}</dc:creator>
   </metadata>
   <manifest>
@@ -138,7 +139,7 @@ public static class EpubWriter
     string tempPath = Path.Combine(Path.GetTempPath(), filename);
 
     string description = epub.Description;
-    string date = epub.Date.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'");
+    string date = epub.Date.ToString("yyyy-MM-dd");
     string version = Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version ?? "1.0.0";
     string bookid = epub.Title.Replace(" ", "_");
     string booktitle = epub.Title;
